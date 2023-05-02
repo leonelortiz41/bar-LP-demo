@@ -1,4 +1,4 @@
-let output = [], delivery1 = "Alexis", delivery2 = "Ferchu", delivery3 = "Nico", retiro = "retirado", pagado = "pagado";
+let output = [], delivery1 = "delivery 1", delivery2 = "delivery 2", delivery3 = "delivery 3", retiro = "retirado", pagado = "pagado";
 const comision = 30;
 let hidden_delivery1 = [], hidden_delivery2 = [], hidden_delivery3 = [];
 let agregar = document.querySelector(".agregar")
