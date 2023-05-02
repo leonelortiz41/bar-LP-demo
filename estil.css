@@ -1,0 +1,1191 @@
+@font-face {
+	font-family: hiromisake;
+	src: url(HIROMISAKE.ttf);
+	font-family: viking;
+	src: url(PR-Viking.ttf);
+	font-family: Rye-Regular;
+	src: url(Rye-Regular.ttf);
+
+}
+
+* {
+	padding: 0px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+body {
+	background-color: #010101;
+	color: #fff;
+	font-family: sans-serif;
+	user-select: none;
+}
+
+.Encabezado {
+	display: block;
+	width: 100%;
+	height: 90px;
+	background-color: #111111;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+
+.Encabezado h2 {
+	display: inline-block;
+}
+
+.Encabezado p {
+	margin-top: auto;
+	margin-bottom: auto;
+	justify-content: center;
+	text-align: left;
+	display: inline-block;
+	font-size: 21px;
+}
+
+.Encabezado .cancelar {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 50px;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+	font-size: 20px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	background: #fe0606;
+	color: #fff;
+}
+
+.Encabezado .cancelar:active {
+	background: #000;
+}
+
+h1 {
+	display: inline-block;
+	text-shadow: #000 -4px 0 8px;
+	font-weight: normal;
+	font-family: Rye-Regular;
+	text-align: center;
+	margin: auto;
+	font-size: 49px;
+	width: 35%;
+	color: #fe8819;
+}
+
+.lds-ring {
+	display: block;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	color: #e3a934;
+}
+
+.lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 84px;
+	height: 84px;
+	margin: 8px;
+	border: 10px solid;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.7, 0.6, 0.5, 0.8) infinite;
+	border-color: #e3a934 transparent transparent transparent;
+}
+.lds-ringCuad {
+	display: inline-table;
+	position: absolute;
+	left: 20%;
+	width: 100px;
+	height: 70px;
+	margin: auto;
+	vertical-align: top;
+	top: 38%;
+	color: #e3a934;
+}
+.lds-ringCuad div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	margin: 8px;
+	border: 5px solid;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(1.001, 0.102, 1.2, 0.201) infinite;
+	/* animation: lds-ring 1.2s cubic-bezier(0.6, 0.6, 0.5, 0.8) infinite; */
+	border-color: #e3a934 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+	animation-delay: -0.49s;
+}
+
+.lds-ring div:nth-child(2) {
+	animation-delay: -0.6s;
+}
+
+.lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.divStock {
+	display: inline-block;
+	width: 40%;
+	text-align: center;
+}
+
+.divStock label {
+	display: inline-block;
+	background: #000;
+	width: 100px;
+	height: 46px;
+	border-radius: 5px;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: none;
+}
+
+.divStock label input {
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	background: none;
+	outline: none;
+	border: none;
+	width: 100%;
+	font-size: 17px;
+	color: #f8a845;
+}
+
+.divStock label input::-webkit-inner-spin-button,
+.divStock label input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.Contenedor {
+	border-radius: 10px;
+	display: flex;
+	height: 120px;
+	width: 100%;
+	overflow-x: scroll;
+	margin: auto;
+	margin-top: 4px;
+	align-items: center;
+	text-align: center;
+	background-color: #111111;
+	border: 1.6px #717171 solid;
+}
+
+.Contenedor::-webkit-scrollbar {
+	display: none;
+}
+
+.Contenedor a {
+	background-color: #000;
+	padding: 6px;
+	display: inline-block;
+	text-align: center;
+	color: #eee;
+	text-decoration: none;
+	font-family: sans-serif;
+	justify-content: center;
+	font-size: 16px;
+	border-radius: 10px;
+	margin: 10px;
+	height: 65px;
+	min-width: 140px;
+}
+
+.Contenedor span {
+	margin: auto;
+}
+
+.Contenedor a:hover {
+	text-decoration: blink;
+	color: #e90;
+	border-radius: 10px;
+	height: 75px;
+	transition: all .15s ease-in-out;
+}
+
+
+
+
+.general .nav-items,
+.complementos label {
+	display: none;
+}
+
+#milanesas .nav-items,
+#lomitos .nav-items,
+#hamburguesas .nav-items,
+#pizzas .nav-items,
+#papas .nav-items,
+#platos .nav-items,
+#empanadas .nav-items,
+#bebidas .nav-items {
+	display: inline-block;
+	text-align: center;
+	justify-content: center;
+	vertical-align: middle;
+	margin: 0px;
+	margin-top: 25px;
+	border-radius: 10px;
+	width: 99%;
+}
+
+
+.menus .nav-items button {
+	list-style: none;
+	align-items: center;
+	text-align: left;
+	background-color: #101010;
+	color: #fff;
+	border: none;
+	width: 100%;
+	border-radius: 4px;
+	padding: 2px;
+	padding-left: 8px;
+	margin: 0px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 22px;
+	cursor: pointer;
+}
+
+.menus .nav-items button:focus {
+	background: #313131;
+}
+
+.nav-items button:hover {
+	background-color: #4b4444;
+}
+
+
+#pizzas .nav-items button {
+	width: 49%;
+	font-size: 16px;
+}
+
+
+.elementos {
+	display: inline-block;
+	width: 33%;
+	margin-top: 3px;
+	margin-right: 20px;
+	justify-content: center;
+	cursor: pointer;
+	height: 350px;
+	border-bottom: 1.5px ridge #555;
+	border-left: 1.5px ridge #555;
+	overflow-y: scroll;
+}
+
+.elementos::-webkit-scrollbar {
+	display: none;
+}
+
+.complementos {
+	display: inline-block;
+	width: 15%;
+	height: 250px;
+	margin-top: 5px;
+	vertical-align: top;
+}
+
+.complementos label {
+	margin: 4px;
+}
+
+
+
+.aggregations input[type=checkbox],
+.complementos label input[type=checkbox] {
+	display: none;
+}
+
+.aggregations .agg:before,
+.complementos label label:before {
+	content: "";
+	border: 2.5px solid #404040;
+	border-radius: 10px;
+	height: 20px;
+	width: 20px;
+	margin-right: 2px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.aggregations input[type=checkbox]+label,
+.complementos label input[type=checkbox]+label {
+	cursor: pointer;
+}
+
+.aggregations input[type=checkbox]:checked+label:before,
+.complementos label input[type=checkbox]:checked+label:before {
+	content: "si";
+	justify-content: center;
+	text-align: center;
+	color: #000;
+	font-size: 19px;
+	background: #fe7911;
+}
+
+.aggregations {
+	display: inline-block;
+	vertical-align: top;
+	width: 17%;
+	margin-top: 5px;
+}
+
+.aggregations .agg {
+	display: block;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 2px;
+	justify-content: center;
+	float: right;
+}
+
+.agregadoPapas,
+.agregadoQueso,
+.agregadoJamon,
+.agregadoHuevo {
+	padding: 5px;
+	display: block;
+	margin: auto;
+	align-content: center;
+	text-align: left;
+	justify-content: center;
+	background: #111;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+.papasCantidad,
+.huevoCantidad {
+	width: 30px;
+	height: 20px;
+	text-align: center;
+	float: right;
+	font-size: 18px;
+	border-radius: 3px;
+}
+
+.agregar {
+	display: block;
+	background-color: #ea7912;
+	color: #000;
+	height: 73px;
+	width: 73px;
+	font-size: 59px;
+	border-radius: 50px;
+	border: none;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.agregar:active {
+	background-color: #ffb122;
+}
+
+.contAgreg {
+	display: inline-block;
+}
+
+.contAgreg .agregar {
+	margin-top: 5px;
+}
+
+.carrito1 {
+	width: 26%;
+	display: block;
+	color: #fff;
+	float: right;
+	margin-top: 6px;
+	box-shadow: 6px -4px 5px -3px #ea7912;
+}
+
+.tableOrder {
+	width: 99%;
+	display: block;
+	margin: auto;
+	height: 300px;
+	overflow-y: scroll;
+}
+
+.tableOrder::-webkit-scrollbar {
+	display: none;
+}
+
+.celdatableOrder {
+	background: #050505;
+	width: 98%;
+	height: 38px;
+	justify-content: center;
+	display: flex;
+	margin: auto;
+	margin-top: 2.5px;
+}
+
+.celdaBoton {
+	display: inline-block;
+	height: 35px;
+	width: 35px;
+	vertical-align: middle;
+	text-align: center;
+	background: #121212;
+	color: #e8a84a;
+	font-size: 19px;
+	text-align: center;
+	align-items: center;
+	border-radius: 20px;
+
+}
+
+.celdaCantidad {
+	width: 7%;
+	text-align: center;
+}
+
+.celdaComida {
+	width: 62%;
+	overflow-y: scroll;
+	height: auto;
+	text-align: left;
+}
+.celdaComida::-webkit-scrollbar {
+	background: #121212;
+	width: 7px;
+	border-radius: 4px;
+}
+.celdaComida::-webkit-scrollbar-thumb {
+	background: #918181;
+	border-radius: 4px;
+}
+body::-webkit-scrollbar {
+	background: #121212;
+	width: 7px;
+	border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb {
+	background: #e1a131;
+	border-radius: 4px;
+}
+.celdaPrecio {
+	width: 16%;
+	color: #55feae;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.carrito .enviar {
+	width: auto;
+	padding: 10px;
+	display: inline-block;
+	color: #000;
+	text-align: center;
+	justify-content: center;
+	font-size: 20px;
+	border-radius: 19px;
+	border: none;
+	background-color: #ea7912;
+	cursor: pointer;
+}
+
+.carrito i {
+	justify-content: center;
+	text-align: center;
+	display: block;
+}
+
+.carrito .cliente {
+	display: inline-block;
+	font-size: 26px;
+	width: 68%;
+	height: 28px;
+	padding-left: 5px;
+	background-color: #111;
+	color: #fff;
+	text-align: left;
+	justify-content: center;
+	vertical-align: middle;
+	border: none;
+	cursor: pointer;
+}
+
+.carrito .enviar:active {
+	background-color: #ffb122;
+}
+
+
+.pedidoEdit {
+	width: 100%;
+	padding: 2px;
+	display: block;
+	color: #000;
+	text-align: left;
+	padding-left: 5px;
+	font-size: 20px;
+	justify-content: center;
+	border-radius: 8px;
+	border: none;
+	margin: 10px;
+	background-color: #fff;
+	cursor: pointer;
+	position: relative;
+}
+
+.importeOutput {
+	display: inline-block;
+	width: 15%;
+	font-size: 16px;
+	vertical-align: middle;
+	margin: 0px;
+	height: 28px;
+	align-items: center;
+	justify-content: center;
+	background: #121212;
+	color: #55feae;
+	text-align: center;
+}
+
+
+
+.navegador {
+	display: inline-table;
+	width: 20%;
+	text-align: right;
+	float: right;
+}
+
+.navegador a {
+	color: #fff;
+	text-decoration-line: none;
+	font-size: 26px;
+}
+
+.navegador a:active {
+	color: #999;
+}
+
+.navegador a:hover {
+	text-shadow: #999 0px 0 8px;
+}
+
+.table2 th,
+.table2 td {
+	box-shadow: -2px 2px 6px -3px #ea7912;
+}
+
+.table1 {
+	border-right: none;
+	height: 380px;
+	overflow-y: scroll;
+}
+
+.table1 .celDetalles::-webkit-scrollbar,
+.table1::-webkit-scrollbar,
+.repartoClients2::-webkit-scrollbar,
+.repartoClients1::-webkit-scrollbar,
+.repartoClients3::-webkit-scrollbar {
+	background: #121212;
+	width: 7px;
+	border-radius: 4px;
+}
+
+.table1 .celDetalles::-webkit-scrollbar-thumb,
+.table1::-webkit-scrollbar-thumb,
+.repartoClients2::-webkit-scrollbar-thumb,
+.repartoClients1::-webkit-scrollbar-thumb,
+.repartoClients3::-webkit-scrollbar-thumb {
+	background: #212121;
+	border-radius: 4px;
+}
+
+.table2 th {
+	margin: auto;
+	text-align: center;
+	align-content: center;
+	justify-content: center;
+	width: 180px;
+}
+
+.table1 th {
+	color: #e8a84a;
+}
+
+.table1 td {
+	height: 20px;
+	background-color: #090909;
+}
+
+.table1 .celDetalles {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 100%;
+	height: 50px;
+	display: inline-block;
+	text-align: left;
+	justify-content: center;
+	align-items: center;
+}
+
+.table1 tr {
+	align-items: center;
+	text-align: center;
+}
+
+.nroTb {
+	width: 9%;
+}
+
+.detalleTb {
+	width: 30%;
+}
+
+.clienteTb {
+	width: 15%;
+}
+
+.importeTb {
+	width: 10%;
+}
+
+.cantidadTb {
+	width: 5%;
+}
+
+
+
+.celdaTotal {
+	width: 100px;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+
+.table1 {
+	align-items: center;
+	vertical-align: top;
+	text-align: center;
+	display: inline-block;
+	justify-content: center;
+	margin: 10px;
+	width: 58%;
+	align-content: center;
+}
+
+.table2 {
+	align-items: center;
+	display: block;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.colBotones {
+	background-color: #fa2;
+	width: 25%;
+	height: auto;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	vertical-align: top;
+	background: linear-gradient(to right, #090909, #010101);
+}
+
+.divBotones {
+	display: block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.divBotones button {
+	margin: 1px;
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 8px;
+	border: none;
+	border-radius: 8px;
+	font-size: 15px;
+	background: #e8a84a;
+}
+
+.divBotones .mas {
+	float: left;
+	background: #121212;
+	color: #e8a84a;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border-radius: 20px;
+}
+
+.divBotones .mas:active {
+	background: #e8a84a;
+	color: #121212;
+}
+
+.boton:hover {
+	background: #ffdac7;
+}
+
+.boton:active {
+	background: #121212;
+	color: #e8a84a;
+}
+
+.output {
+	font-size: 20px;
+}
+
+/*#empanadasHref{
+	background-color: #771212;
+}*/
+
+.table3 {
+	box-shadow: -0.5px 0.5px 8px 0.7px #ea7912;
+	margin-top: 60px;
+	align-items: center;
+	display: block;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.table3 th {
+	width: 35%;
+}
+
+.table3 button {
+	border-radius: 40%;
+	background: #121212;
+	color: #e8a84a;
+	border: none;
+	display: block;
+	margin: auto;
+	margin-bottom: 3px;
+	font-size: 18px;
+	padding: 6px;
+	cursor: pointer;
+}
+
+.table3 button:active {
+	background: #e8a84a;
+	color: #121212;
+}
+.botonTables,.table2 .botonCerrarTable2,.table3 .botonCerrarTable3 {
+	display: none;
+}
+
+.repartoClients2,
+.repartoClients1,
+.repartoClients3 {
+	border-left: solid 2.5px #e8a84a;
+	width: 65%;
+	height: 70px;
+	overflow-y: scroll;
+}
+
+.table3 .borr {
+	background: none;
+	color: #ef4441;
+}
+
+.contein {
+	display: inline-block;
+	width: 30%;
+}
+
+.templa,
+.noTempla {
+	display: none;
+	width: 260px;
+	height: auto;
+	border: solid 1px #000;
+}
+
+
+
+
+
+.none {
+	display: none;
+}
+
+
+.impDate {
+	font-family: Rye-Regular;
+	text-shadow: #000 -4px 0 8px;
+	display: block;
+	margin-top: 0px;
+}
+
+.impDate h2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+nav a {
+	display: block;
+}
+
+.form-date {
+	width: 60%;
+	display: block;
+	background-color: #050606;
+	margin: auto;
+	justify-content: center;
+	margin-top: 70px;
+	padding: 5px;
+	border-radius: 15px;
+}
+
+.form-date h3 {
+	color: #ea7912;
+	font-size: 50px;
+	display: block;
+	margin: auto;
+	justify-content: center;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+.form-date input {
+	display: block;
+	margin: auto;
+	margin-bottom: 5px;
+	align-items: center;
+	font-size: 16px;
+	justify-content: center;
+}
+
+.form-date h5 {
+	display: block;
+	font-size: 25px;
+	margin: auto;
+	text-align: center;
+	justify-content: center;
+}
+
+
+
+.iniciarSesion,
+.cerrarSesion {
+	border-radius: 5px;
+	border: none;
+	padding: 8px;
+	cursor: pointer;
+	color: #191919;
+}
+
+.iniciarSesion {
+	background-color: #689956;
+}
+
+.iniciarSesion:active {
+	background-color: #68e956;
+}
+
+.cerrarSesion {
+	background-color: #670202;
+	display: inline-block;
+	vertical-align: bottom;
+	margin: auto;
+	justify-content: center;
+	color: #fff;
+}
+
+.cerrarSesion:active {
+	background-color: #771212;
+}
+
+.imprCuaderno {
+	background-color: #235;
+	display: inline-block;
+	padding: 10px;
+	vertical-align: bottom;
+	margin: auto;
+	justify-content: center;
+	color: #fff;
+	border-radius: 5px;
+	border: none;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.imprCuaderno:active {
+	background-color: #223;
+}
+
+.celdaClase {
+	display: none;
+}
+
+.eye{
+	height: 11px;
+	width: 23px;
+	background: none;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+}
+.eye :active{
+	color: #e8a84a;
+}
+.pceldaTotal{
+	display: inline;
+	font-size: 16px;
+	margin-right: 3px;
+}
+@media (max-width:1150px) {
+	h1 {
+		font-size: 35px;
+		display: block;
+	}
+
+	.Encabezado {
+		height: 140px;
+	}
+
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.navegador {
+		width: 20%;
+	}
+
+	.divStock {
+		width: 60%;
+	}
+}
+
+@media (max-width:880px) {
+	.Encabezado {
+		height: 120px;
+	}
+
+	h1 {
+		display: block;
+		width: 90%;
+		font-size: 39px;
+	}
+
+	.navegador {
+		width: 30%;
+	}
+
+	.navegador a {
+		font-size: 18px;
+	}
+
+	.impDate h2 {
+		font-size: 15px;
+	}
+
+	.divStock {
+		width: 70%;
+	}
+
+	.divStock label {
+		font-size: 2px;
+		height: 63px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		width: 22%;
+	}
+
+	.divStock label input {
+		margin: auto;
+		justify-content: center;
+		font-size: 20px;
+	}
+
+	.carrito1 {
+		float: none;
+		margin: auto;
+		display: block;
+		width: 95%;
+	}
+
+	.Contenedor {
+		display: flex;
+	}
+
+	.Contenedor a {
+		width: 200px;
+		height: 100px;
+	}
+
+	.elementos {
+		display: block;
+		width: 95%;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		margin-top: 9px;
+	}
+
+	.nav-items button {
+		height: 42px;
+		margin-bottom: 4px;
+		background-color: #7aa;
+	}
+
+	#pizzas .nav-items button {
+		width: 100%;
+		font-size: 22px;
+	}
+
+	.aggregations {
+		width: 48%;
+	}
+
+	.complementos {
+		width: 48%;
+	}
+
+	.aggregations .agregar {
+		/* position: fixed; */
+		float: right;
+	}
+
+	.celdatableOrder {
+		height: 41px;
+	}
+
+	.importeOutput,
+	.carrito .cliente {
+		height: 42px;
+	}
+
+
+	/*cuaderno*/
+	.navegadorCuaderno {
+		width: 50%;
+	}
+
+	.table1 {
+		display: block;
+		width: 100%;
+		height: 469px;
+		font-size: 12px;
+		margin: 1px;
+	}
+
+	.divBotones button {
+		display: block;
+		float: right;
+		position: static;
+	}
+
+	
+
+	.table3 ,.table2{
+		display: none;
+		background-color: rgba(0, 0, 0, 0.93);
+	}
+	.table2{
+		box-shadow: -0.5px 0.5px 8px 0.7px #ea7912;
+	}
+	.table2 td{
+		box-shadow: none;
+		font-size: 13px;
+	}
+
+	.botonTables {
+		display: inline-flex;
+		text-align: center;
+		justify-content: center;
+		margin-left: 30px;
+		width: 16%;
+		height: 35px;
+		padding: 3px;
+	}
+
+	.botonCuaTable2,
+	.botonCuaTable3 {
+		background-color: #e19111;
+		border: none;
+		border-radius: 7px;
+		display: inline-block;
+		height: 30px;
+		color: #000;
+		width: 40%;
+		margin: auto;
+	}
+	.table2 .botonCerrarTable2,
+	.table3 .botonCerrarTable3{
+		background-color: #a22;
+		color: #fff;
+		width: 33px;
+		height: 28px;
+		border: none;
+		border-radius: 5px;
+	}
+	.contein{width: 50%;}
+	.contAgreg {
+		margin-top: 10px;
+		display: block;
+		width: 100%;
+	}
+	.cerrarYCuaderno{
+		width: 40%;
+		display: inline-block;
+	}
+	.cerrarYCuaderno button{
+		height: 33px;
+		padding: 10px;
+	}
+	.sobreescribiendo{
+		font-size: 20px;
+		display: block;
+		width: 99%;
+		margin-bottom: 0px;
+	}
+	.sobreesP{
+		font-size: 13px;
+		margin-top: 1px;
+		display: inline-block;
+		text-align: left;
+		justify-content: center;
+	}
+	.Encabezado .cancelar{
+		margin-top: 3px;
+		display: inline-block;
+		text-align: center;
+		align-items: center;
+		vertical-align: top;
+	}
+}
